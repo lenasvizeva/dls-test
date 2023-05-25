@@ -3,24 +3,109 @@
 *------------------*/
 
 nav {
-    background: #333;
-    border-bottom-right-radius: 5px;
-    left: 0;
-    padding: 1rem;
-    position: absolute;
-    top: 0;
+    border-bottom: 1px solid #E9E9E9;
+    border-top: 1px solid #E9E9E9;
+    padding-top: 2.15rem;
+    padding-bottom: 2rem;
 
-    ul {
+    .menu {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin-right: 3.25rem;
+            position: relative;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover > ul {
+                opacity: 1;
+            }
+        }
     }
 
-    li a {
-        color: #f9f9f9;
+    .link {
+        color: $color-black;
+        text-decoration: none;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
 
         &:hover {
             text-decoration: none;
         }
+
+        &--dropdown {
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                background-image: url('../../img/svg/arrow.svg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                width: .8rem;
+                height: .4rem;
+                margin-left: .5rem;
+            }
+
+            &:hover ~ .submenu { 
+                opacity: 1;
+                transition: opacity .6s ease-in-out;
+            }
+        }
+
+        &--submenu {
+            font-weight: 400;
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+            color: $color-black;
+            margin: .8rem 0;
+        }
+    }
+
+    .submenu {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 3.8rem;
+        transition: opacity .6s ease-in-out;
+        background-color: #fff;
+        padding: 1.2rem 2rem;
+        list-style-type: none;
+        text-decoration: none;
+        width: 17.6rem;
+        border: 1px solid #E9E9E9;
+        
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+            border-bottom: 1px solid #E9E9E9;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        li::after {
+            content: '';
+            display: block;
+            background-image: url('../../img/svg/arrow.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: .6rem;
+            height: .4rem;
+            transform: rotate(-90deg);
+
+        }
     }
 }
+
