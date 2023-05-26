@@ -5,6 +5,10 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @include tablet {
+        font-size: 58.5%;
+    }
 }
 
 * {
@@ -20,14 +24,22 @@ body {
     overflow-x: hidden;
     position: relative;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-.page-width {
+.page-width, .top {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-    max-width: 1160px;
+    max-width: 116.6rem;
+    width: 96%;
+
+    @include mobile {
+        max-width: 100%;
+    }
+
+    @include tablet {
+        max-width: 76.8rem;
+    }
 }
 
 button {

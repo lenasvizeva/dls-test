@@ -1,13 +1,16 @@
 .card {
-    width: 36rem;
+    width: 30.5%;
     font-family: 'Roboto';
-    margin: 0 20px;
-    margin-top: 4.8rem;
+    margin-bottom: .8rem;
 
     @include mobile {
         width: 100%;
         margin: 0;
-        margin-top: 3.2rem ;
+        margin-top: 3.2rem;
+    }
+
+    @include tablet {
+        width: 46.4%;
     }
 
     &__img img {
@@ -65,12 +68,11 @@
                 height: .3rem;
                 border-radius: 50%;
                 background-color: #D7D7D7;
-                margin: 0 5px;
+                margin: 0 .5rem;
             }
 
             &:last-child::after {
                 display: none;
-                
             }
         }
 

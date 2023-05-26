@@ -2,6 +2,7 @@ const nav = document.querySelector('.nav')
 const body = document.querySelector('.body')
 const overlay = document.querySelector('.overlay')
 
+// mobile menu open and close toggle
 const mobileMenuToggle = () => {
     if (nav.classList.contains('show')) {
         nav.classList.remove('show')
@@ -14,12 +15,14 @@ const mobileMenuToggle = () => {
     }
 }
 
+// closing menu by clicking outside it
 window.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('overlay')) {
         mobileMenuToggle()
     } 
 })
 
+// nav bar behavior on scrolling
 window.addEventListener('scroll', () => {
     const currentScrollPosition = window.pageYOffset
 
