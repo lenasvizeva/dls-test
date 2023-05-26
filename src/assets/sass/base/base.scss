@@ -21,11 +21,6 @@ body {
     position: relative;
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
-
-    &.hidden {
-        height: 100vh;
-        overflow: hidden;
-    }
 }
 
 .page-width {
@@ -35,3 +30,20 @@ body {
     max-width: 1160px;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(55, 55, 54, 0.467);
+}

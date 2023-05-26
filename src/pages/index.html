@@ -1,85 +1,22 @@
 {% extends "base.html" %}
+{% from "card.html" import card %}
 
 {% block content %}
 <main class="main-content">
     <div class="page-width">
 
-
-        {% for item in navs %}
-        <div>
-            <a href="/" class="link link--dropdown">
-                {{ item.name }}
-            </a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">
-                        {{ item.submenu.name }}
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        {% endfor %}
-
        <div class="cards">
+            
+            {{ card('../../img/slide0.jpg', 'Lifestyle', 'Eat Right For Your Exercise Regime') }}
+            {{ card('../../img/slide1.jpg', 'Lifestyle', 'The Look: Perfect Balance') }}
+            {{ card('../../img/slide2.jpg', 'Style', 'Fun Things to Do in Rome') }}
+            {{ card('../../img/slide3.jpg', 'Style', '24 Colorful Ceilings That Add Unexpected Contrast to Any Room') }}
+            {{ card('../../img/slide4.jpg', 'Lifestyle', '9 New Songs to Heat Up Your Fall Playlist') }}
+            {{ card('../../img/slide5.jpg', 'Events', 'What You Need on Your Bedside Table') }}
+            {{ card('../../img/slide6.jpg', 'Travel', 'When Two Wheels Are Better Than Four') }}
+            {{ card('../../img/slide7.jpg', 'Travel', '26 Living Room Ideas from the Homes of Top Designers') }}
+            {{ card('../../img/slide8.jpg', 'Music', 'What Makes Your City’s Style Unique') }}
 
-            <article class="card">
-                <a href="#">
-                    <div class="card__img">
-                        <img src="../../img/slide0.jpg" alt="" />
-                    </div>
-            
-                    <span class="card__tag">Lifestyle</span>
-            
-                    <h3 class="card__title">
-                        Eat Right For Your Exercise Regime
-                    </h3>
-            
-                    <div class="card__info">
-            
-                        <span class="card__author">Niek Bove</span>
-                        <span class="card__date">April 8, 2018</span>
-                        <span class="card__stats">3K Views</span>
-                        
-                    </div>
-            
-                    <span class="card__descr">
-                        Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. 
-                        Warmth comfort hangs loosely from the body large pocket at the front full button…
-                    </span>
-                </a>
-            </article>
-
-            <article class="card">
-                <a href="#">
-                    <div class="card__img">
-                        <img src="../../img/slide1.jpg" alt="" />
-                    </div>
-                    <h3 class="card__title">
-                        The Look: Perfect Balance
-                    </h3>
-                    <span class="card__descr">
-                        Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. 
-                        Warmth comfort hangs loosely from the body large pocket at the front full button…
-                    </span>
-                </a>
-            </article>
-
-            <article class="card">
-                <a href="#">
-                    <div class="card__img">
-                        <img src="../../img/slide2.jpg" alt="" />
-                    </div>
-                    <h3 class="card__title">
-                        Fun Things to Do in Rome
-                    </h3>
-                    <span class="card__descr">
-                        Structured gripped tape invisible moulded cups for sauppor firm hold strong powermesh front liner sport detail. 
-                        Warmth comfort hangs loosely from the body large pocket at the front full button…
-                    </span>
-                </a>
-            </article>
        </div>
     </div>
 

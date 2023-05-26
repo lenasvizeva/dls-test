@@ -1,103 +1,48 @@
-<nav>
+{% macro menu_item(item) %}
+<li class="menu__item">
+    <a href="/" class="link link--dropdown">
+        {{ item }}
+    </a>
+
+    <ul class="submenu">
+        <li><a href="/" class="link link--submenu">Post Header</a></li>
+        <li><a href="/" class="link link--submenu">Post Layout</a></li>
+        <li><a href="/" class="link link--submenu">Share Buttons</a></li>
+        <li><a href="/" class="link link--submenu">Gallery Post</a></li>
+        <li><a href="/" class="link link--submenu">Video Post</a></li>
+    </ul>
+</li>
+{% endmacro %}
+
+{% block content %}
+
+<nav class="nav" id="nav">
     <ul class="menu">
 
-        <!-- {% for item in navs %}
-        <li class="menu__item">
-            <a href="/" class="link link--dropdown">
-                {{ item.name }}
+        <div class="menu__mobile-header">
+            <a href="/" class="logo">
+                <img src="../../img/svg/logo.svg" alt="logo" />
             </a>
 
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">
-                        {{ item.submenu.name }}
-                    </a>
-                </li>
-            </ul>
-        </li>
+            <button class="close-btn" onclick="mobileMenuToggle()">
+                <img src="../../img/svg/cross.svg" alt="close menu button" />
+            </button>
+
             
-        {% endfor %} -->
+        </div>
 
-
-        <li>
-            <a href="/" class="link link--dropdown">Demos</a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="/" class="link link--dropdown">Post</a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/" class="link link--dropdown">Features</a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/" class="link link--dropdown">Categories</a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/" class="link link--dropdown">Shop</a>
-
-            <ul class="submenu">
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-                <li>
-                    <a href="/" class="link link--submenu">Post Header</a>
-                </li>
-            </ul>
-        </li>
-        <li>
+        {{ menu_item('Demos') }}
+        {{ menu_item('Post') }}
+        {{ menu_item('Features') }}
+        {{ menu_item('Categories') }}
+        {{ menu_item('Shop') }}
+        <li class="menu__item">
             <a href="/" class="link">Buy Now</a>
-        </li>
+        </li> 
+       
     </ul>
+
+    
 </nav>
 
+{% endblock %}

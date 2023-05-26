@@ -4,12 +4,22 @@
 
 .main-content {
     width: 100%;
+    padding-bottom: 16.55rem;
+
+    @include mobile {
+        padding: 0 2rem;
+    }
 }
 
 .cards {
     display: flex;
     justify-content: space-between;
-    margin-top: 4.85rem;
+    flex-flow: row wrap;
     margin-left: -20px;
     margin-right: -20px;
+
+    @include mobile {
+        flex-direction: column;
+        margin: 0;
+    }
 }

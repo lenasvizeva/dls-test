@@ -6,18 +6,10 @@ const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const sass = require('gulp-sass')(require('sass'));
 const concat = require("gulp-concat");
-const browserSync = require("browser-sync").create(); //https://browsersync.io/docs/gulp#page-top
+const browserSync = require("browser-sync").create(); 
 const nunjucksRender = require("gulp-nunjucks-render");
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
-
-// /*
-// TOP LEVEL FUNCTIONS
-//     gulp.task = Define tasks
-//     gulp.src = Point to files to use
-//     gulp.dest = Points to the folder to output
-//     gulp.watch = Watch files and folders for changes
-// */
 
 // Optimise Images
 function imageMin(cb) {
