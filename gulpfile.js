@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const { parallel, series } = require("gulp");
+const deploy = require('gulp-gh-pages');
 
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
@@ -107,6 +108,11 @@ function watch_files() {
         browserSync.reload
     );
 }
+
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+      .pipe(deploy())
+});
 
 // Default 'gulp' command with start local server and watch files for changes.
 exports.default = series(nunjucks, css, js, imageMin, watch_files);
