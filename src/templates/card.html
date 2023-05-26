@@ -1,8 +1,8 @@
-{% macro card(img, tag, title) %}
+{% macro card(img, img_medium, tag, title) %}
 <article class="card">
     <a href="#">
         <div class="card__img">
-            <img src="{{ img }}" alt="" />
+            <img src="{{ img }}" srcset="{{ img_medium }} 720w" alt="card image" />
         </div>
 
         <span class="card__tag">{{ tag }}</span>
