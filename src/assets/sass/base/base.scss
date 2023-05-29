@@ -4,8 +4,8 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
-
+    font-size: 62.5%;           // Такое значение font-size используется для удобства конвертации px в rem (62.5% от размера шрифта браузера 16px = 10px),
+                                // подробнее об этом методе можно узнать из статьи https://www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
     @include tablet {
         font-size: 58.5%;
     }
@@ -20,6 +20,7 @@ html {
 }
 
 body {
+    font-size: 1.6rem;          // 1.6 * 10px = 16px 
     display: block;
     overflow-x: hidden;
     position: relative;
